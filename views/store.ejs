@@ -1,0 +1,28 @@
+<%- include("./includes/head") %>
+    <link rel="stylesheet" href="/css/product.css" />
+  </head>
+  <body>
+    <%- include("./includes/navigation") %>
+    <h1>Welcome to My Online store</h1>
+    <br />
+    <% if(prod.length>0){ %>
+    <div>
+      <% for(products of prod){ %>
+      <div class="card">
+        <div class="container">
+          <h2 class="title">Name :- <%= products.name %></h2>
+          <h3>Brand :- <%= products.brand %></h3>
+          <h3>Price :- <%= products.price %></h3>
+        </div>
+        <p>
+          <a href="/products/<%= products.id %>"><button>Details</button></a>
+          <a href=""><button>Add To Cart</button></a>
+        </p>
+      </div>
+
+      <% } %>
+    </div>
+    <% }else{ %>
+    <h2>No product found</h2>
+    <% } %>
+    <%- include("./includes/footer") %>
