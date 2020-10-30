@@ -1,0 +1,163 @@
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url("/img/back.jpg");
+  background-attachment: fixed;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  margin-top: 50px;
+}
+
+.logo {
+  margin-left: 30px;
+}
+.logo img {
+  height: 100px;
+  float: left;
+  margin: 20px;
+}
+
+.hero {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero h1 {
+  color: white;
+}
+
+.features h3 {
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+h3:after {
+  width: 100px;
+  height: 2px;
+  background-color: #e67e22;
+  display: block;
+  content: "";
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.arranging {
+  text-align: justify;
+}
+
+.features i {
+  font-size: 30px;
+  color: #e67e22;
+  margin-left: 37%;
+}
+
+.features h4 {
+  margin-left: 40px;
+}
+
+.meal-showcase {
+  list-style: none;
+  width: 100%;
+}
+
+.meal-showcase li {
+  display: block;
+  width: 24.5%;
+  float: left;
+}
+
+.meal-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.meal-photo img {
+  width: 100%;
+  height: auto;
+  transition: all 0.5s;
+}
+
+.meal-photo img:hover {
+  transform: scale(1.05);
+}
+
+.meal {
+  margin-top: 125px;
+}
+
+.photo {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.pic {
+  margin-top: 20px;
+}
+
+.cities {
+  margin-top: 50px;
+}
+
+.cities img {
+  margin-top: 30px;
+}
+
+.cities i {
+  color: #e67e22;
+}
+
+.testimonials {
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.testimonials p {
+  margin-top: 10px;
+  line-height: 25px;
+  text-align: justify;
+}
+
+.testimonials cite img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.form {
+  margin-top: 120px;
+}
+
+.btn-block {
+  background-color: #e67e22;
+  color: white;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.gap {
+  margin-top: 40px;
+}
+
+.city {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.city img {
+  transform: scale(1.15);
+  transition: all 0.5s;
+}
+
+.city img:hover {
+  transform: scale(1.05);
+}
+
+.plans {
+  margin-top: 120px;
+}

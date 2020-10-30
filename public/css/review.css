@@ -1,0 +1,31 @@
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url("/img/back.jpg");
+  background-attachment: fixed;
+  height: 130vh;
+  background-position: center;
+  background-size: cover;
+  margin-top: 50px;
+}
+
+.para2 {
+  margin-top: 70px;
+  color: wheat;
+}
+
+.form {
+  margin-top: 50px;
+  width: 400px;
+  color: wheat;
+  margin-left: 240px;
+}
+
+.logo {
+  margin-top: 50px;
+  margin-left: 30px;
+}
+.logo img {
+  height: 100px;
+  float: left;
+  margin: 20px;
+}

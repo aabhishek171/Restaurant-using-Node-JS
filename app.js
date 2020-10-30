@@ -1,33 +1,35 @@
-require("./models/db");
 const express = require("express");
-const path = require("path");
-const exphbs = require("express-handlebars");
-const bodyparser = require("body-parser");
-const orderController = require("./controllers/orderController");
+const bodyParser = require("body-parser");
+const foodRoutes = require("./routes/food");
+const orderRoutes = require("./routes/order");
+const reviewRoutes = require("./routes/review");
+const mongoose = require("mongoose");
 
-const app = expres();
+const app = express();
 
-app.use(
-  bodyparser.urlencoded({
-    extended: true,
+app.set("view engine", "ejs");
+app.set("views", "Views");
+
+//app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(express.static("public"));
+
+app.use(foodRoutes);
+app.use(orderRoutes);
+app.use(reviewRoutes);
+
+mongoose
+  .connect("mongodb://localhost:27017/myRestaurant", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
   })
-);
-
-app.use(bodyparser.json());
-app.use(express.static(path.join(__dirname, "/public")));
-app.set("views", path.join(__dirname, "views"));
-app.engine(
-  "hbs",
-  exphbs({
-    extname: "hbs",
-    defaultLayout: "mainLayout",
-    layoutsDir: __dirname + "/views/",
+  .then((result) => {
+    app.listen(8000, () => {
+      console.log("server started on 8000");
+    });
+    console.log("Database connected");
   })
-);
-
-app.set("view engine", "hbs");
-app.listen(3000, () => {
-  console.log("Server started on port :3000");
-});
-
-app.use("/", orderController);
+  .catch((err) => {
+    console.log("can't connect to databse", err);
+  });
