@@ -1,5 +1,0 @@
-const express = require("express");
-const foodController = require("../controllers/food");
-const router = express.Router();
-
-module.exports = router;
