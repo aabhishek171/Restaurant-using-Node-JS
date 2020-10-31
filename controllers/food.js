@@ -1,4 +1,5 @@
-const Food = require("../models/food");
+const Review = require("../models/review");
+const Order = require("../models/order");
 
 exports.foodHome = (req, res, next) => {
   res.render("home", {
@@ -36,7 +37,7 @@ exports.orderPostFood = (req, res, next) => {
   const veg = req.body.veg;
   const nonveg = req.body.nonveg;
   const dessert = req.body.dessert;
-  const foodorder = new Food({
+  const foodorder = new Order({
     name: name,
     email: email,
     phone: phone,
@@ -71,7 +72,7 @@ exports.reviewPostFood = (req, res, next) => {
   const email = req.body.email;
   const phone = req.body.phone;
   const comments = req.body.comments;
-  const review = new Food({
+  const review = new Review({
     name: name,
     email: email,
     phone: phone,
