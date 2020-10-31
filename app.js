@@ -1,8 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const foodRoutes = require("./routes/food");
-const orderRoutes = require("./routes/order");
-const reviewRoutes = require("./routes/review");
+//const orderRoutes = require("./routes/order");
+//const reviewRoutes = require("./routes/review");
 const mongoose = require("mongoose");
 
 const app = express();
@@ -10,14 +10,14 @@ const app = express();
 app.set("view engine", "ejs");
 app.set("views", "Views");
 
-//app.use(bodyParser.json());
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static("public"));
 
 app.use(foodRoutes);
-app.use(orderRoutes);
-app.use(reviewRoutes);
+//app.use(orderRoutes);
+//app.use(reviewRoutes);
 
 mongoose
   .connect("mongodb://localhost:27017/myRestaurant", {

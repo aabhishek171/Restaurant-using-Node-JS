@@ -9,22 +9,64 @@
 </head>
 <body></body>
   <%- include("./includes/navigation") %>
-  <div class="row">
-    <div class="logo">
-    <img src="/img/logo.png">
+  <div class="row" style="margin-top: 80px; margin-right: 20px;">
+    <div class="col-md-3">
+      <div class="logo">
+        <img src="/img/logo.png">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="container">
+          <h2><u>Veg</u></h2>
+          <h4>Bhindi Masala - ₹ 60.00</h4>
+          <h4>Aaloo Dum Banarsi - ₹ 70.00</h4>
+          <h4>Matar Paneer - ₹ 80.00</h4>
+          <h4>Paneer Do Pyaza - ₹ 100.00</h4>
+          <h4>Mushroom Chilly - ₹ 160.00</h4>
+          <h4>Cheese Garlic Dry - ₹ 160.00</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="container">
+          <h2><u>NonVeg</u></h2>
+          <h4>Egg Curry - ₹ 100.00</h4>
+          <h4>Chicken Tikka - ₹ 170.00</h4>
+          <h4>Reshmi Kabab - ₹ 200.00</h4>
+          <h4>Tangri Kabab - ₹ 240.00</h4>
+          <h4>Tandoori Chicken - ₹ 300.00</h4>
+          <h4>Butter Chicken - ₹ 400.00</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="container">
+          <h2><u>Dessert</u></h2>
+          <h4>Gulab Jamun(2 pcs) - ₹ 40.00</h4>
+          <h4>Chocolate Brownie - ₹ 50.00</h4>
+          <h4>PanCakes - ₹ 50.00</h4>
+          <h4>Cup Cakes - ₹ 60.00</h4>
+          <h4>Coconut Kheer - ₹ 80.00</h4>
+          <h4>Pumpkin pie - ₹ 100.00</h4>
+        </div>
+      </div>
+  </div>
   </div>
   <h3 class="para2" style="font-size:50px; margin-left: 180px;">Choose your meal and order now.</h3>
-  <form action="/home" method="POST" class="form">
+  <form action="/foodorders" method="POST" class="form">
     <div class="form-group">
       <label for="usr">Name:</label>
       <input type="text" class="form-control" id="name" name="name" required>
     </div>
     <div class="form-group">
-      <label for="pwd">Email:</label>
+      <label for="email">Email:</label>
       <input type="email" class="form-control" id="email" name="email" required>
     </div>
     <div class="form-group">
-      <label for="pwd">Contact No.:</label>
+      <label for="contact">Contact No.:</label>
       <input type="number" class="form-control" id="phone" name="phone" required>
     </div>
     <div class="form-group">
@@ -32,37 +74,16 @@
       <textarea class="form-control" rows="3" id="address" name="address" required></textarea>
     </div>
     <div class="form-group">
-      <label for="sel1">Select Item:</label>
-      <select class="form-control" id="veg" name="veg" required>
-        <option>Veg</option>
-        <option>Bhindi Masala - ₹ 60.00</option>
-        <option>Aaloo Dum Banarsi - ₹ 70.00</option>
-        <option>Paneer Do Pyaza - ₹ 100.00</option>
-        <option>Matar Paneer - ₹ 80.00</option>
-        <option>Mushroom Chilly - ₹ 160.00</option>
-        <option>Cheese Garlic Dry - ₹ 160.00</option>
-        <option>None</option>
-      </select><br>
-      <select class="form-control" id="nonveg" name="nonveg" required>
-        <option>Nonveg</option>
-        <option>Egg Curry - ₹ 100.00</option>
-        <option>Chicken Tikka - ₹ 170.00</option>
-        <option>Reshmi Kabab - ₹ 200.00</option>
-        <option>Tangri Kabab - ₹ 240.00</option>
-        <option>Tandoori Chicken - ₹ 300.00</option>
-        <option>Butter Chicken - ₹ 400.00</option>
-        <option>None</option>
-      </select><br>
-      <select class="form-control" id="dessert" name="dessert" required>
-        <option>Dessert</option>
-        <option>Gulab Jamun(2 pcs) - ₹ 40.00</option>
-        <option>Chocolate Brownie - ₹ 50.00</option>
-        <option>PanCakes - ₹ 50.00</option>
-        <option>Cup Cakes - ₹ 60.00</option>
-        <option>Coconut Kheer - ₹ 80.00</option>
-        <option>Ice Cream - As per MRP</option>
-        <option>None</option>
-      </select>
+      <label for="veg">Veg:</label>
+      <input type="text" class="form-control" id="veg" name="veg" required>
+    </div>
+    <div class="form-group">
+      <label for="nonveg">Nonveg:</label>
+      <input type="text" class="form-control" id="nonveg" name="nonveg" required>
+    </div>
+    <div class="form-group">
+      <label for="dessert">Dessert:</label>
+      <input type="text" class="form-control" id="dessert" name="dessert" required>
     </div>
     <button class="button" type="submit" onclick="abc()" style="color: black;">Order</button>
   </form>

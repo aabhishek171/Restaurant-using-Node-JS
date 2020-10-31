@@ -36,7 +36,7 @@ exports.orderPostFood = (req, res, next) => {
   const veg = req.body.veg;
   const nonveg = req.body.nonveg;
   const dessert = req.body.dessert;
-  const order = new Food({
+  const foodorder = new Food({
     name: name,
     email: email,
     phone: phone,
@@ -46,19 +46,15 @@ exports.orderPostFood = (req, res, next) => {
     dessert: dessert,
   });
 
-  order
+  foodorder
     .save()
     .then((result) => {
-      res.json({
-        status: "success",
-        message: "Product added successfully",
-        data: result,
-      });
+      res.redirect("/");
     })
     .catch((err) => {
       res.json({
         status: "error",
-        message: "Can't add product",
+        message: "Can't order food",
       });
     });
 };
@@ -85,16 +81,12 @@ exports.reviewPostFood = (req, res, next) => {
   review
     .save()
     .then((result) => {
-      res.json({
-        status: "success",
-        message: "Product added successfully",
-        data: result,
-      });
+      res.redirect("/");
     })
     .catch((err) => {
       res.json({
         status: "error",
-        message: "Can't add product",
+        message: "Can't add review",
       });
     });
 };
