@@ -1,7 +1,7 @@
 {
-  "name": "class-practice",
+  "name": "restaurant-ca",
   "version": "1.0.0",
-  "description": "Understandin node js",
+  "description": "Project",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
